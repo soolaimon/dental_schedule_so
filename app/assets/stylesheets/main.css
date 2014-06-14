@@ -13,7 +13,10 @@
   border-radius: 10px;
 }
 
-
+h1 {
+  color: #005FAD;
+  font-size: 30px;
+}
 
 a {
   text-decoration: none;
@@ -55,4 +58,9 @@ li a:hover {
 
 li a:active {
   color: black;
+}
+
+.add a {
+  color: #FA8D2D;
+  font-size: 20px;
 }
