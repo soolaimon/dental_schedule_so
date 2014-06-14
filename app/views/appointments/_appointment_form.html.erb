@@ -1,23 +1,28 @@
 <%= form_for [@person, @appointment] do |f| %>
-  <%= f.label :time %>
+
+<div id="chart">
+  <%= image_tag("teethcsm.jpg", :alt => "family picture") %>  
+</div>
+  <%= f.label :time, 'Time: ' %>
   <%= f.datetime_select :time %>
   <br>
-  <%= f.label :dentist %>
+  <%= f.label :dentist, 'Dentist: ' %>
   <%= f.text_field :dentist %>
   <br>
-  <%= f.label :description %>
+  <%= f.label :description, 'Description: ' %>
   <br>
   <%= f.text_area :description %>
   <br>
-  <%= f.label :estimated_cost %>
+  <%= f.label :estimated_cost, 'Estimated cost: ' %>
   $<%= f.number_field :estimated_cost %>
-  
+
   <div>
-    <%= f.label "Regular Checkup:"  %>
+    <%= f.label "Regular Checkup: "  %>
     <%= f.check_box :is_checkup %>
   </div>
+  </br>
 
-  <%= f.submit "Save Apointment" %>
+  <%= f.submit "Save Apointment", class:'save_appointment' %>
 
 
 <% end %>

@@ -12,3 +12,40 @@
 	font-weight: bold;
 	color: #2d525d;
 }
+
+.save_appointment {
+  width: 150px;
+  height: 22px;
+  border-top:	2px solid #a3ceda;
+  border-left:	2px solid #a3ceda;
+  border-right:	2px solid #4f6267;
+  border-bottom:	2px solid #4f6267;
+  padding: auto;
+  font-size: 13px !important;
+  font-align: center;
+  background-color: #c4f1fe;
+  font-weight: bold;
+  color: #2d525d;
+}
+
+.create {
+  width: auto;
+  height: 22px;
+  border-top:	2px solid #DBB4C5;
+  border-left:	2px solid #DBB4C5;
+  border-right:	2px solid #855E6F;
+  border-bottom:	2px solid #855E6F;
+  padding: auto 15px;
+  margin: 5px auto;
+  font-size: 13px !important;
+  font-align: center;
+  background-color: #F0C7D9;
+  font-weight: bold;
+  color: #2d525d;
+}
+
+
+#chart img {
+  float: right;
+  margin: auto 5px 30px auto;
+}

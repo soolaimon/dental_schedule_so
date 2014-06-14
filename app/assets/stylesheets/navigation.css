@@ -42,3 +42,9 @@ margin: 0px;
 padding: 0px;
 background: white;
 }
+
+#wrap a {
+  color: black;
+  margin: 30px auto;
+  padding: 10px;
+}
