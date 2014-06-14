@@ -3,11 +3,11 @@
   <% @people.each do |person| %>
   <li>
     <%= person.name %>
-    -- <%= link_to "Appointments", person_path(person) %>
-    -- <%= link_to "Edit", edit_person_path(person) %>
-    -- <%= link_to "Delete", person_path(person), method: :delete, "data-confirm" => "Are you sure?"  %>
+    : &nbsp; <%= link_to "Appointments", person_path(person) %>
+    | <%= link_to "Edit", edit_person_path(person) %>
+    | <%= link_to "Delete", person_path(person), method: :delete, "data-confirm" => "Are you sure?"  %>
   </li>
   <% end %>
 </ul>
 
-<%= link_to "Add person", new_person_path %>
+<%= link_to "- Add person -", new_person_path %>

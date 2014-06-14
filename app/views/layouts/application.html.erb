@@ -13,32 +13,30 @@
 
   <body>
 
-    <div id="wrap">
-      <div id="logo">
-        <%= image_tag("dentlogo02.jpg", :alt => "family dental logo") %>
-      </div>
-      <header>
-        <nav>
-          <%= link_to('Main Page', root_path) %>
-          <span>&nbsp;|&nbsp;</span>
-          <%= link_to('Add people', new_person_path) %>
-          <span>&nbsp;|&nbsp;</span>
-          <%= link_to('See appointments', people_path) %>
-        </nav>
+      <div id="wrap">
+        <div id="logo">
+          <%= image_tag("dentlogo02.jpg", :alt => "family dental logo") %>
+        </div>
+        <header>
+          <nav>
+            <%= link_to('Main Page', root_path) %>
+            <span>&nbsp;|&nbsp;</span>
+            <%= link_to('Add People', new_person_path) %>
+            <span>&nbsp;|&nbsp;</span>
+            <%= link_to('See Appointments', people_path) %>
+          </nav>
+        </header>
 
-      </header>
+        <section id="main_content">
+          <%= yield %>
+        </section>
 
-    <section id="main_content">
-      <%= yield %>
-    </section>
-
-    <footer>
-      Copyright &copy; <%= Time.now.year %> - Team Duck Duck Geek
-    </footer>
-
-    </div>
-
+      <footer>
+        Copyright &copy; <%= Time.now.year %> - Team Duck Duck Geek
+      </footer>
 
     <%= javascript_include_tag "application" %>
+    </div>
+
   </body>
 </html>

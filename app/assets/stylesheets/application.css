@@ -17,12 +17,14 @@
 body {
   font-family: 'Helvetica neue';
   font-size: 16px;
-  background-color: white;
+  background-color: #DCECFC;
 }
 
 #logo img {
   float: left:
-  margin: 20px;
+  margin-top: 20px;
+  margin-bottom: 0px;
+  margin-left: 20px;
   padding: 10px;
   height: 150px;
   width: 250px;
