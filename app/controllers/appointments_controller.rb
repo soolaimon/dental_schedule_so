@@ -1,5 +1,6 @@
 class AppointmentsController < ApplicationController
   before_action :find_appointment, only: [:show, :edit, :update, :destroy]
+  before_action :find_person, only: [:new, :create, :edit, :destroy]
 
   def index
     @appointments = Appointment.all
@@ -9,13 +10,13 @@ class AppointmentsController < ApplicationController
   end
 
   def new
-    @appointment = Appointment.new
+    @appointment = @person.appointments.new
   end
 
   def create
-    @appointment = Appointment.new(appointment_params)
+    @appointment = @person.appointments.new(appointment_params)
     if @appointment.save
-      redirect_to people_path
+      redirect_to person_path(params[:person_id])
     else
       render :new
     end
@@ -23,11 +24,13 @@ class AppointmentsController < ApplicationController
   end
 
   def edit
+
   end
 
   def update
     if @appointment.update_attributes(appointment_params)
-      redirect_to people_path
+      redirect_to person_path(params[:person_id]) 
+
     else
       render :edit
     end
@@ -35,17 +38,22 @@ class AppointmentsController < ApplicationController
 
   def destroy
     @appointment.destroy
-    redirect_to people_path
+    redirect_to person_path(params[:person_id]) 
   end
 
   private
 
   def appointment_params
-    params.require(:appointment).permit(:name)
-    
+    params.require(:appointment).permit(:time, :dentist, :description, :person_id, :cost, :is_checkup)
   end
 
   def find_appointment
     @appointment = Appointment.find(params[:id]) 
   end
+
+  def find_person
+    @person = Person.find(params[:person_id])
+    
+  end
+
 end
