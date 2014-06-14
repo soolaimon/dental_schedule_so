@@ -1,16 +1,23 @@
 <h1><%= @person.name %>'s appointments</h1>
+
+<% if @appointments.empty? %>
+    <h2>No upcoming appointments.</h2>
+
+<% else %>
 <ul>
   <% @appointments.each do |appointment| %>
 
     <li>
-      <%= appointment.time.strftime("%A %B %d, %Y at %I:%M %P") %>
-      <%= appointment.dentist %>
-      <%= appointment.description %>
-      <%= number_to_currency(appointment.estimated_cost) %>
-      -- <%= link_to "Edit", edit_person_appointment_path(@person, appointment) %>
-      -- <%= link_to "Delete", person_appointment_path(@person, appointment), method: :delete, "data-confirm" => "Are you sure?" %>
+      <%= appointment.time.strftime("%A %B %d, %Y at %I:%M %P") %> <br>
+      <b>With:</b> <%= appointment.dentist %> <br>
+      <b>for</b> <%= appointment.description %> <br>
+      <b>Est Cost:</b> <%= number_to_currency(appointment.estimated_cost) %> <br>
+      <%= link_to "Edit", edit_person_appointment_path(@person, appointment) %> &#124;
+      <%= link_to "Delete", person_appointment_path(@person, appointment), method: :delete, "data-confirm" => "Are you sure?" %>
     </li>
 
   <% end %>
 </ul>  
+<% end %>
+<%= link_to "<<Back to People", people_path %>
 <%= link_to "Add Appointment", new_person_appointment_path(@person) %>
