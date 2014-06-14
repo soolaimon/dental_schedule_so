@@ -16,8 +16,10 @@ class AppointmentsController < ApplicationController
   def create
     @appointment = @person.appointments.new(appointment_params)
     if @appointment.save
+      flash[:alert] = "Appointment saved successfully."
       redirect_to person_path(params[:person_id])
     else
+      flash[:falied] = "Failed to save appointment."
       render :new
     end
 
@@ -29,9 +31,10 @@ class AppointmentsController < ApplicationController
 
   def update
     if @appointment.update_attributes(appointment_params)
+      flash[:alert] = "Appointment saved successfully."
       redirect_to person_path(params[:person_id]) 
-
     else
+      flash[:failed] = "Failed to save appointment."
       render :edit
     end
   end
@@ -55,7 +58,7 @@ class AppointmentsController < ApplicationController
   private
 
   def appointment_params
-    params.require(:appointment).permit(:time, :dentist, :description, :person_id, :cost, :is_checkup)
+    params.require(:appointment).permit(:time, :dentist, :description, :person_id, :estimated_cost, :is_checkup)
   end
 
   def find_appointment
