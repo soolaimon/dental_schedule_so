@@ -41,6 +41,17 @@ class AppointmentsController < ApplicationController
     redirect_to person_path(params[:person_id]) 
   end
 
+  def create_a_recurring_appointment
+    @appointment = Appointment.find(params[:id]).dup
+    @appointment.update_attributes(time: Time.now + 6.months)
+
+    if @appointment.save
+      redirect_to person_path(params[:person_id])
+    else
+      render :new
+    end
+  end
+
   private
 
   def appointment_params
