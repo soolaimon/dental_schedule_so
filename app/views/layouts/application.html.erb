@@ -4,7 +4,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <title><%= content_for?(:title) ? yield(:title) : "foundation-rails" %></title>
+    <title>Family Dental</title>
 
     <%= stylesheet_link_tag    "application" %>
     <%= javascript_include_tag "vendor/modernizr" %>
@@ -12,8 +12,28 @@
   </head>
 
   <body>
+    <div id="wrap">
+      <header>
+        <nav>
+          <%= link_to('Main Page', root_path) %>
+          <span>&nbsp;|&nbsp;</span>
+          <%= link_to('Add people', new_person_appointment_path) %>
+          <span>&nbsp;|&nbsp;</span>
+          <%= link_to('See appointments', person_appointment_path) %>
+        </nav>
+      </header>
 
-    <%= yield %>
+    <section id="main_content">
+      <%= yield %>
+    </section>
+
+    <footer>
+      Copyright &copy; <%= Time.now.year %> - Team Duck Duck Geek
+    </footer>
+
+    </div>
+
+
     <%= javascript_include_tag "application" %>
   </body>
 </html>
