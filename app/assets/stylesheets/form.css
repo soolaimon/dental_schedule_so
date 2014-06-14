@@ -1,0 +1,14 @@
+.save {
+  width: 100px;
+  height: 22px;
+	border-top:	2px solid #a3ceda;
+	border-left:	2px solid #a3ceda;
+	border-right:	2px solid #4f6267;
+	border-bottom:	2px solid #4f6267;
+	padding: auto;
+	font-size: 13px !important;
+  font-align: center;
+	background-color: #c4f1fe;
+	font-weight: bold;
+	color: #2d525d;
+}

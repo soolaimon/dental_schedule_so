@@ -15,7 +15,7 @@
 
       <div id="wrap">
         <div id="logo">
-          <%= image_tag("dentlogo02.jpg", :alt => "family dental logo") %>
+          <%= link_to image_tag("dentlogo02.jpg", :alt => "family dental logo"), root_path %>
         </div>
         <header>
           <nav>
@@ -29,6 +29,9 @@
 
         <section id="main_content">
           <%= yield %>
+          <div id="family">
+            <%= image_tag("fam01sm.jpg", :alt => "family picture") %>
+          </div>
         </section>
 
       <footer>

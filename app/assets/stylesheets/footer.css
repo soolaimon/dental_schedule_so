@@ -1,5 +1,7 @@
 footer {
+  width: 760px;
   text-align: center;
+  margin: auto;
   border-top: 1px solid gray;
   font-size: 12px;
   padding: 5px;

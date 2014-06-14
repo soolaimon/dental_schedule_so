@@ -36,3 +36,9 @@ nav a:active {
   padding: 5px;
   text-align: center;
 }
+
+#logo a:hover {
+margin: 0px;
+padding: 0px;
+background: white;
+}

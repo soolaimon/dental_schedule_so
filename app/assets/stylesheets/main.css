@@ -1,0 +1,59 @@
+#wrap {
+  width: 800px;
+  background: white;
+  margin: auto;
+}
+
+#main_content {
+  width: 700px;
+  margin: 20px auto;
+  padding: 20px;
+  /*text-align: center;*/
+  background: rgba(133,186,242,0.2);
+  border-radius: 10px;
+}
+
+
+
+a {
+  text-decoration: none;
+}
+
+a:visited {
+  color: black;
+}
+
+a:hover {
+  color: black;
+  padding: 5px;
+  text-align: center;
+  background: rgba(0,0,0,0.2);
+  border-radius: 8px;
+}
+
+
+li {
+  margin: 1px;
+  padding: 10px;
+}
+
+
+li a {
+  color: black;
+}
+
+li a:visited {
+  color: black;
+}
+
+li a:hover {
+  color: black;
+  padding: 5px;
+  text-align: center;
+  background: rgba(0,0,0,0.2);
+  border-radius: 8px;
+}
+
+li a:active {
+  color: black;
+}
