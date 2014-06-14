@@ -7,7 +7,10 @@
       <%= appointment.dentist %>
       <%= appointment.description %>
       <%= number_to_currency(appointment.estimated_cost) %>
+      -- <%= link_to "Edit", edit_person_appointment_path(@person, appointment) %>
+      -- <%= link_to "Delete", person_appointment_path(@person, appointment), method: :delete, "data-confirm" => "Are you sure?" %>
     </li>
 
   <% end %>
-</ul>
+</ul>  
+<%= link_to "Add Appointment", new_person_appointment_path(@person) %>
