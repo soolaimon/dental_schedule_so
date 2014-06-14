@@ -16,6 +16,7 @@ class PeopleController < ApplicationController
   def create
     @person = Person.new(person_params)
     if @person.save
+      flash[:alert] = "Person saved successfully."
       redirect_to people_path
     else
       render :new
@@ -28,6 +29,7 @@ class PeopleController < ApplicationController
 
   def update
     if @person.update_attributes(person_params)
+      flash[:failed] = "Person failed to save."
       redirect_to people_path
     else
       render :edit
