@@ -6,6 +6,7 @@ class PeopleController < ApplicationController
   end
 
   def show
+    @appointments = @person.appointments.all
   end
 
   def new
