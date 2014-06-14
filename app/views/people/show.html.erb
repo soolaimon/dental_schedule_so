@@ -1,4 +1,9 @@
 <h1><%= @person.name %>'s appointments</h1>
+
+<% if @appointments.empty? %>
+    <h2>No upcoming appointments.</h2>
+
+<% else %>
 <ul>
   <% @appointments.each do |appointment| %>
 
@@ -13,4 +18,6 @@
 
   <% end %>
 </ul>  
+<% end %>
+<%= link_to "<<Back to People", people_path %>
 <%= link_to "Add Appointment", new_person_appointment_path(@person) %>
