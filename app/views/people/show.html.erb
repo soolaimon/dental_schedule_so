@@ -3,12 +3,12 @@
   <% @appointments.each do |appointment| %>
 
     <li>
-      <%= appointment.time.strftime("%A %B %d, %Y at %I:%M %P") %>
-      <%= appointment.dentist %>
-      <%= appointment.description %>
-      <%= number_to_currency(appointment.estimated_cost) %>
-      -- <%= link_to "Edit", edit_person_appointment_path(@person, appointment) %>
-      -- <%= link_to "Delete", person_appointment_path(@person, appointment), method: :delete, "data-confirm" => "Are you sure?" %>
+      <%= appointment.time.strftime("%A %B %d, %Y at %I:%M %P") %> <br>
+      <b>With:</b> <%= appointment.dentist %> <br>
+      <b>for</b> <%= appointment.description %> <br>
+      <b>Est Cost:</b> <%= number_to_currency(appointment.estimated_cost) %> <br>
+      <%= link_to "Edit", edit_person_appointment_path(@person, appointment) %> &#124;
+      <%= link_to "Delete", person_appointment_path(@person, appointment), method: :delete, "data-confirm" => "Are you sure?" %>
     </li>
 
   <% end %>
