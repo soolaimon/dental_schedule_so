@@ -43,8 +43,7 @@ padding: 0px;
 background: white;
 }
 
-#wrap a {
-  color: black;
-  margin: 30px auto;
+#main_content a {
+  margin: 10;
   padding: 10px;
 }

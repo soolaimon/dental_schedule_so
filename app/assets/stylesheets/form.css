@@ -49,3 +49,7 @@
   float: right;
   margin: auto 5px 30px auto;
 }
+
+#family img {
+  margin: 5px;
+}

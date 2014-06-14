@@ -25,12 +25,11 @@ a:visited {
 
 a:hover {
   color: black;
-  padding: 5px;
+  padding: 0px;
   text-align: center;
   background: rgba(0,0,0,0.2);
   border-radius: 8px;
 }
-
 
 li {
   margin: 1px;
