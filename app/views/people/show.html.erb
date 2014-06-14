@@ -1,2 +1,13 @@
 <h1><%= @person.name %>'s appointments</h1>
-<p>Find me in app/views/people/show.html.erb</p>
+<ul>
+  <% @appointments.each do |appointment| %>
+
+    <li>
+      <%= appointment.time %>
+      <%= appointment.dentist %>
+      <%= appointment.description %>
+      <%= number_to_currency(appointment.estimated_cost) %>
+    </li>
+
+  <% end %>
+</ul>

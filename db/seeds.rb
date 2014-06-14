@@ -8,5 +8,6 @@
 
 
 Person.create(name: "Dave")
-Person.create(name: "Hiromi")
+person = Person.create(name: "Hiromi")
 
+Appointment.create(time: Time.new + 3.weeks, person_id: person.id, dentist: "Dr. Douchebag", description:"Lorem ipsum, etc." , is_checkup: false, estimated_cost: 0)
