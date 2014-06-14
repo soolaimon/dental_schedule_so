@@ -1,0 +1,8 @@
+<h1>Listing <%= pluralize(@people.count, "Person") %></h1>
+<ul>
+  <% @people.each do |person| %>
+  <li>
+    <%= person.name %> -- <%= link_to "Appointments", person_path(person.id) %>
+  </li>
+  <% end %>
+</ul>
