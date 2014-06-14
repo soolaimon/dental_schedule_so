@@ -12,6 +12,18 @@
  *
  *= require_tree .
  *= require_self
- *= require foundation_and_overrides
-
  */
+
+body {
+  font-family: 'Helvetica neue';
+  font-size: 16px;
+  background-color: white;
+}
+
+#logo img {
+  float: left:
+  margin: 20px;
+  padding: 10px;
+  height: 150px;
+  width: 250px;
+}

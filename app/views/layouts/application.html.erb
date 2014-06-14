@@ -12,15 +12,19 @@
   </head>
 
   <body>
+
     <div id="wrap">
+      <div id="logo">
+        <%= image_tag("dentlogo02.jpg", :alt => "family dental logo") %>
+      </div>
       <header>
         <nav>
           <%= link_to('Main Page', root_path) %>
           <span>&nbsp;|&nbsp;</span>
-          <%= link_to('Add people', new_person_appointment_path) %>
+          <!--<%#= link_to('Add people', new_person_appointment_path) %>
           <span>&nbsp;|&nbsp;</span>
-          <%= link_to('See appointments', person_appointment_path) %>
-        </nav>
+          <%#= link_to('See appointments', person_appointment_path) %>
+        </nav> -->
       </header>
 
     <section id="main_content">
