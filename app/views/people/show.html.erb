@@ -3,7 +3,7 @@
   <% @appointments.each do |appointment| %>
 
     <li>
-      <%= appointment.time %>
+      <%= appointment.time.strftime("%A %B %d, %Y at %I:%M %P") %>
       <%= appointment.dentist %>
       <%= appointment.description %>
       <%= number_to_currency(appointment.estimated_cost) %>
